@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #1c1a3a;
+    background-color: #f6f4ff;
+}
+
+.faixa-promo {
+    background-color: #1c1a3a;
+    color: #e9e6ff;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+.faixa-promo strong {
+    color: #ffc83d;
+}
