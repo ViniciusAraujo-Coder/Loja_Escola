@@ -1,3 +1,5 @@
+/* ========== Base ========== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,43 @@ body {
     background-color: #f6f4ff;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background-color: #1c1a3a;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background-color: #2e2b57;
+}
+
+
+/* ========== Faixa de promoção ========== */
+
 .faixa-promo {
     background-color: #1c1a3a;
     color: #e9e6ff;
@@ -20,4 +59,312 @@ body {
 
 .faixa-promo strong {
     color: #ffc83d;
+}
+
+
+/* ========== Cabeçalho ========== */
+
+header {
+    padding: 12px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2ddf5;
+}
+
+.cabecalho-linha {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #1c1a3a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.busca {
+    flex: 1;
+    max-width: 520px;
+    display: flex;
+    background-color: #ffffff;
+    border: 2px solid #1c1a3a;
+    border-radius: 999px;
+    padding: 3px;
+}
+
+.busca input {
+    flex: 1;
+    border: 0;
+    padding: 8px 14px;
+    font: inherit;
+    background-color: transparent;
+}
+
+.busca input:focus {
+    outline: none;
+}
+
+.busca:focus-within {
+    outline: 3px solid #c9c0ff;
+}
+
+.busca button {
+    border: 0;
+    border-radius: 999px;
+    padding: 0 20px;
+    background-color: #1c1a3a;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.busca button:hover {
+    background-color: #2e2b57;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.menu ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: #1c1a3a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    background-color: #e4dfff;
+}
+
+.menu a[aria-current="page"] {
+    background-color: #1c1a3a;
+    color: #ffffff;
+}
+
+
+/* ========== Destaque ========== */
+
+.destaque {
+    padding: 48px 0;
+    background-color: #E2DDFD;
+}
+
+.destaque-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.destaque-texto {
+    flex: 1;
+}
+
+.destaque img {
+    width: 45%;
+    border-radius: 20px;
+}
+
+.destaque-selo {
+    display: inline-block;
+    background-color: #ffc83d;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.destaque h1 {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.destaque-descricao {
+    font-size: 18px;
+    max-width: 420px;
+    margin-bottom: 24px;
+}
+
+
+/* ========== Vantagens ========== */
+
+.vantagens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    list-style: none;
+    margin: 24px 0 40px;
+}
+
+.vantagens li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.vantagens-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffff;
+    border: 1px solid #e2ddf5;
+    border-radius: 14px;
+    font-size: 22px;
+}
+
+.vantagens p {
+    font-size: 14px;
+    color: #5d5a7a;
+}
+
+.vantagens p strong {
+    padding: 0 6px;
+    border: 1.5px dashed #1c1a3a;
+    border-radius: 6px;
+    color: #1c1a3a;
+}
+
+
+/* ========== Seções do main ========== */
+
+.secao {
+    margin-bottom: 48px;
+}
+
+main h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+
+/* ========== Catálogo ========== */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    background-color: #ffffff;
+    border: 1px solid #e2ddf5;
+    border-radius: 20px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.card-categoria {
+    margin: 12px 4px 2px;
+    font-size: 13px;
+    color: #5d5a7a;
+}
+
+.card-titulo {
+    margin: 0 4px 4px;
+    font-size: 17px;
+}
+
+.card-titulo a {
+    color: #1c1a3a;
+    text-decoration: none;
+}
+
+.card-titulo a:hover {
+    text-decoration: underline;
+}
+
+.card-descricao {
+    margin: 0 4px 12px;
+    font-size: 14px;
+    color: #5d5a7a;
+}
+
+.card-preco {
+    margin: auto 4px 4px;
+}
+
+.card-preco strong {
+    font-size: 20px;
+    color: #c8213f;
+}
+
+.card-preco s {
+    margin-left: 6px;
+    font-size: 13px;
+    color: #5d5a7a;
+}
+
+/* ========== Regras ========== */
+
+.regras {
+    padding: 32px;
+    background-color: #e4dfff;
+    border-radius: 28px;
+}
+
+.regras-intro {
+    max-width: 560px;
+    margin-bottom: 24px;
+    color: #5d5a7a;
+}
+
+.regras-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    list-style: none;
+}
+
+
+.regras-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.regras-icone {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.regras-lista strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.regras-lista p {
+    font-size: 14px;
+    color: #5d5a7a;
 }

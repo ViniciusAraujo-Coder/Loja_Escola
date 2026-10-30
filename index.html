@@ -14,115 +14,171 @@
     </p>
 
     <header>
+        <div class="container cabecalho-linha">
 
-        <a href="index.html"><img src="img/favicon.svg" alt="" height="50">Loja Impossível</a>
-        
-        <form action="index.html">
-            <label for="busca">Buscar produtos</label>
-            <input type="search" id="busca" name="busca" placeholder="Busque: bolso, espaço, formiga...">
-            <button>Buscar</button>
-        </form>
+            <a class="logo" href="index.html"><img src="img/favicon.svg" alt="">Loja Impossível</a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="index.html#catalogo">Catálogo</a></li>
-                <li><a href="index.html#regras">Regras</a></li>
-            </ul>
-        </nav>
+            <form class="busca" action="index.html">
+                <label class="sr-only" for="busca">Buscar produtos</label>
+                <input type="search" id="busca" name="busca" placeholder="Busque: bolso, espaço, formiga...">
+                <button>Buscar</button>
+            </form>
 
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Início</a></li>
+                    <li><a href="index.html#catalogo">Catálogo</a></li>
+                    <li><a href="index.html#regras">Regras</a></li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
     <main>
 
-        <section>
-
-            <p>Promoção Mega Impossível</p>
-            <h1>Até 31% OFF no que nem existe</h1>
-            <p>Mini sol de bolso, botas para o espaço e abraço em lata. Aproveite antes que a realidade descubra.</p>
-            <a href="#catalogo">Ver ofertas</a>
-            <img src="https://placehold.co/600x500" alt="">
+        <section class="destaque">
+            <div class="container destaque-conteudo">
+                <div class="destaque-texto">
+                    <p class="destaque-selo">Promoção Mega Impossível</p>
+                    <h1>Até 31% OFF no que nem existe</h1>
+                    <p class="destaque-descricao">Mini sol de bolso, botas para o espaço e abraço em lata. Aproveite antes que a realidade descubra.</p>
+                    <a class="botao" href="#catalogo">Ver ofertas</a>
+                </div>
+                <img src="img/produtos.png" alt="">
+            </div>
         </section>
 
-        <ul aria-label="Vantagens">
-            <li>
-                <span aria-hidden="true">🚚</span>
-                <strong>Frete grátis</strong>
-                <p>No envio padrão a partir de R$ 99.</p>
-            </li>
-            <li>
-                <span aria-hidden="true">🎟️</span>
-                <strong>10% OFF no checkout</strong>
-                <p>Use o cupom <strong>IMPOSSIVEL10</strong></p>
-            </li>
-            <li>
-                <span aria-hidden="true">🛸</span>
-                <strong>Teletransporte</strong>
-                <p>Entrega em até 1 hora, sem trânsito.</p>
-            </li>
-        </ul>
+        <div class="container">
 
-
-        <section id="catalogo">
-            <h2>Produtos Impossíveis</h2>
-            <article>
-                <img src="https://placehold.co/200x200" alt="Mini Sol de Bolso">
-                <p>Miniaturas</p>
-                <h3><a href="pages/produto.html">Mini Sol de Bolso</a></h3>
-                <p>Um sol de verdade, só que do tamanho de uma bola de pingue-pongue.</p>
-                <p>
-                    <strong>R$ 89,90</strong>
-                    <s>R$ 129,90</s>
-                </p>
-
-            </article>
-            
-        </section>
-
-        <section id="regras">
-            <h2>As 6 regras impossíveis</h2>
-            <p>Todo produto precisa cumprir pelo menos uma destas regras. É assim que garantimos que nada aqui existe.</p>
-
-            <ul>
+            <ul class="vantagens" aria-label="Vantagens">
                 <li>
-                    <span aria-hidden="true">👖</span>
-                    <strong>Cabe no bolso</strong>
-                    <p>Se não couber no bolso de uma calça jeans, não entra no catálogo.</p>
+                    <span class="vantagens-icone" aria-hidden="true">🚚</span>
+                    <div>
+                        <strong>Frete grátis</strong>
+                        <p>No envio padrão a partir de R$ 99.</p>
+                    </div>
                 </li>
-
                 <li>
-                    <span aria-hidden="true">✈️</span>
-                    <strong>Não cabe em avião</strong>
-                    <p>Tão grande que nenhuma companhia aérea aceita como bagagem.</p>
+                    <span class="vantagens-icone" aria-hidden="true">🎟️</span>
+                    <div>
+                        <strong>10% OFF no checkout</strong>
+                        <p>Use o cupom <strong>IMPOSSIVEL10</strong></p>
+                    </div>
                 </li>
-
                 <li>
-                    <span aria-hidden="true">🚀</span>
-                    <strong>Uso no espaço</strong>
-                    <p>Projetado para funcionar fora da atmosfera terrestre.</p>
-                </li>
-
-                <li>
-                    <span aria-hidden="true">🐜</span>
-                    <strong>Serve em uma formiga</strong>
-                    <p>Tamanho único… para quem tem seis patas e milímetros.</p>
-                </li>
-
-                <li>
-                    <span aria-hidden="true">⚡</span>
-                    <strong>Começa com Z</strong>
-                    <p>O nome precisa começar com a última letra do alfabeto.</p>
-                </li>
-
-                <li>
-                    <span aria-hidden="true">🎯</span>
-                    <strong>Uso único</strong>
-                    <p>Funciona uma vez, e que vez! Depois vira lembrança.</p>
+                    <span class="vantagens-icone" aria-hidden="true">🛸</span>
+                    <div>
+                        <strong>Teletransporte</strong>
+                        <p>Entrega em até 1 hora, sem trânsito.</p>
+                    </div>
                 </li>
             </ul>
 
-        </section>
-        
+            <section class="secao" id="catalogo">
+                <h2>Produtos impossíveis</h2>
+
+                <div class="produtos">
+
+                    <article class="card">
+                        <img src="https://placehold.co/600x600" alt="Mini Sol de Bolso">
+                        <p class="card-categoria">Miniaturas</p>
+                        <h3 class="card-titulo"><a href="pages/produto.html">Mini Sol de Bolso</a></h3>
+                        <p class="card-descricao">Um sol de verdade, só que do tamanho de uma bola de pingue-pongue.</p>
+                        <p class="card-preco">
+                            <strong>R$ 89,90</strong>
+                            <s>R$ 129,90</s>
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/600x600" alt="Botas Orbitais">
+                        <p class="card-categoria">Espaço e Tempo</p>
+                        <h3 class="card-titulo"><a href="pages/produto.html">Botas Orbitais Antigravidade</a></h3>
+                        <p class="card-descricao">Caminhe pela estação espacial sem sair voando pelo teto.</p>
+                        <p class="card-preco">
+                            <strong>R$ 349,00</strong>
+                            <s>R$ 499,00</s>
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/600x600" alt="Abraço em Lata">
+                        <p class="card-categoria">Bem-estar</p>
+                        <h3 class="card-titulo"><a href="pages/produto.html">Abraço em Lata</a></h3>
+                        <p class="card-descricao">Abriu, abraçou. Sem refil, sem arrependimento.</p>
+                        <p class="card-preco">
+                            <strong>R$ 24,90</strong>
+                            <s>R$ 34,90</s>
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://placehold.co/600x600" alt="Baobá de Estimação">
+                        <p class="card-categoria">Gigantes</p>
+                        <h3 class="card-titulo"><a href="pages/produto.html">Baobá de Estimação XXL</a></h3>
+                        <p class="card-descricao">Um baobá adulto de 7 metros para quem sonha grande.</p>
+                        <p class="card-preco">
+                            <strong>R$ 1.899,00</strong>
+                            <s>R$ 2.499,00</s>
+                        </p>
+                    </article>
+
+                </div>
+            </section>
+
+            <section class="secao regras" id="regras">
+                <h2>As 6 regras impossíveis</h2>
+                <p class="regras-intro">Todo produto precisa cumprir pelo menos uma destas regras. É assim que garantimos que nada aqui existe.</p>
+
+                <ul class="regras-lista">
+                    <li>
+                        <span class="regras-icone" aria-hidden="true">👖</span>
+                        <div>
+                            <strong>Cabe no bolso</strong>
+                            <p>Se não couber no bolso de uma calça jeans, não entra no catálogo.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="regras-icone" aria-hidden="true">✈️</span>
+                        <div>
+                            <strong>Não cabe em avião</strong>
+                            <p>Tão grande que nenhuma companhia aérea aceita como bagagem.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="regras-icone" aria-hidden="true">🚀</span>
+                        <div>
+                            <strong>Uso no espaço</strong>
+                            <p>Projetado para funcionar fora da atmosfera terrestre.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="regras-icone" aria-hidden="true">🐜</span>
+                        <div>
+                            <strong>Serve em uma formiga</strong>
+                            <p>Tamanho único… para quem tem seis patas e milímetros.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="regras-icone" aria-hidden="true">⚡</span>
+                        <div>
+                            <strong>Começa com Z</strong>
+                            <p>O nome precisa começar com a última letra do alfabeto.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="regras-icone" aria-hidden="true">🎯</span>
+                        <div>
+                            <strong>Uso único</strong>
+                            <p>Funciona uma vez, e que vez! Depois vira lembrança.</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
     </main>
 
     <footer>
