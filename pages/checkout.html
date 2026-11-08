@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar compra | Loja Impossível</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <p class="faixa-promo">
+        Frete grátis acima de R$ 99 e 10% OFF com o cupom <strong>IMPOSSIVEL10</strong>
+    </p>
+
+    <header>
+        <div class="container cabecalho-linha">
+
+            <a class="logo" href="../index.html"><img src="../img/favicon.svg" alt="">Loja Impossível</a>
+
+            <form class="busca" action="../index.html">
+                <label class="sr-only" for="busca">Buscar produtos</label>
+                <input type="search" id="busca" name="busca" placeholder="Busque: bolso, espaço, formiga...">
+                <button>Buscar</button>
+            </form>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#catalogo">Catálogo</a></li>
+                    <li><a href="../index.html#regras">Regras</a></li>
+                    <li><a href="checkout.html" aria-current="page">Carrinho <span class="carrinho-contador" hidden>0</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="container">
+
+            <h1 class="pagina-titulo">Finalizar compra</h1>
+
+            <section class="carrinho-vazio painel" hidden>
+                <p>Seu carrinho está vazio. Que tal algo impossível?</p>
+                <a class="botao" href="../index.html#catalogo">Ver produtos</a>
+            </section>
+
+            <div class="checkout">
+
+                <form class="checkout-form" novalidate>
+
+                    <fieldset class="painel">
+                        <legend>1. Seus dados</legend>
+
+                        <div class="campo">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name">
+                            <p class="campo-erro"></p>
+                        </div>
+
+                        <div class="campos-linha">
+                            <div class="campo">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" autocomplete="email">
+                                <p class="campo-erro"></p>
+                            </div>
+                            <div class="campo">
+                                <label for="telefone">Celular</label>
+                                <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(11) 91234-5678">
+                                <p class="campo-erro"></p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="painel">
+                        <legend>2. Entrega</legend>
+
+                        <div class="campos-linha">
+                            <div class="campo">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" name="cep" inputmode="numeric" placeholder="00000-000" maxlength="9" autocomplete="postal-code">
+                                <p class="campo-erro"></p>
+                                <p class="campo-info" role="status"></p>
+                            </div>
+                            <div class="campo">
+                                <label for="cidade">Cidade / UF</label>
+                                <input type="text" id="cidade" name="cidade" placeholder="São Paulo / SP">
+                                <p class="campo-erro"></p>
+                            </div>
+                        </div>
+
+                        <div class="campos-linha">
+                            <div class="campo campo-largo">
+                                <label for="endereco">Endereço</label>
+                                <input type="text" id="endereco" name="endereco" autocomplete="street-address">
+                                <p class="campo-erro"></p>
+                            </div>
+                            <div class="campo">
+                                <label for="numero">Número</label>
+                                <input type="text" id="numero" name="numero">
+                                <p class="campo-erro"></p>
+                            </div>
+                        </div>
+
+                        <p class="opcoes-titulo">Tipo de entrega</p>
+                        <div class="opcoes">
+                            <label class="opcao">
+                                <input type="radio" name="frete" value="padrao" checked>
+                                <span>
+                                    <strong>Padrão</strong>
+                                    <small>5 a 7 dias úteis · grátis acima de R$ 99</small>
+                                </span>
+                                <span class="opcao-preco" data-frete="padrao"></span>
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="frete" value="teletransporte">
+                                <span>
+                                    <strong>Teletransporte</strong>
+                                    <small>Em até 1 hora, sem trânsito</small>
+                                </span>
+                                <span class="opcao-preco" data-frete="teletransporte"></span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="painel">
+                        <legend>3. Pagamento</legend>
+
+                        <div class="opcoes">
+                            <label class="opcao">
+                                <input type="radio" name="pagamento" value="pix" checked>
+                                <span><strong>Pix</strong><small>Aprovação na hora</small></span>
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="pagamento" value="cartao">
+                                <span><strong>Cartão de crédito</strong><small>Até 10x sem juros</small></span>
+                            </label>
+                            <label class="opcao">
+                                <input type="radio" name="pagamento" value="boleto">
+                                <span><strong>Boleto</strong><small>Vence em 3 dias úteis</small></span>
+                            </label>
+                        </div>
+
+                        <div class="cartao-campos" hidden>
+                            <div class="campo">
+                                <label for="cartao-numero">Número do cartão</label>
+                                <input type="text" id="cartao-numero" name="cartao-numero" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="cc-number">
+                                <p class="campo-erro"></p>
+                            </div>
+                            <div class="campos-linha">
+                                <div class="campo">
+                                    <label for="cartao-validade">Validade</label>
+                                    <input type="text" id="cartao-validade" name="cartao-validade" inputmode="numeric" placeholder="MM/AA" maxlength="5" autocomplete="cc-exp">
+                                    <p class="campo-erro"></p>
+                                </div>
+                                <div class="campo">
+                                    <label for="cartao-cvv">CVV</label>
+                                    <input type="text" id="cartao-cvv" name="cartao-cvv" inputmode="numeric" placeholder="123" maxlength="3" autocomplete="cc-csc">
+                                    <p class="campo-erro"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button class="botao botao-grande" type="submit">Confirmar pedido</button>
+                </form>
+
+                <aside class="resumo painel">
+                    <h2>Resumo do pedido</h2>
+
+                    <ul class="resumo-itens"></ul>
+
+                    <form class="cupom">
+                        <label for="cupom">Cupom de desconto</label>
+                        <div class="cupom-linha">
+                            <input type="text" id="cupom" name="cupom" placeholder="IMPOSSIVEL10">
+                            <button type="submit">Aplicar</button>
+                        </div>
+                        <p class="cupom-mensagem" role="status"></p>
+                    </form>
+
+                    <dl class="resumo-totais">
+                        <div><dt>Subtotal</dt><dd class="total-subtotal"></dd></div>
+                        <div><dt>Desconto</dt><dd class="total-desconto"></dd></div>
+                        <div><dt>Frete</dt><dd class="total-frete"></dd></div>
+                        <div class="resumo-total"><dt>Total</dt><dd class="total-geral"></dd></div>
+                    </dl>
+                </aside>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+            <div class="rodape-grade">
+
+                <section>
+                    <h2>Loja Impossível</h2>
+                    <p>A loja de produtos que não existem. Cada item segue uma regra criativa e nenhum deles cabe na vida real.</p>
+                </section>
+
+                <nav>
+                    <h2>Navegue</h2>
+                    <ul>
+                        <li><a href="../index.html">Página inicial</a></li>
+                        <li><a href="../index.html#catalogo">Catálogo</a></li>
+                        <li><a href="../index.html#regras">Como escolhemos os produtos</a></li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <h2>Atendimento</h2>
+                    <ul>
+                        <li>Segunda a sexta, das 9h às 18h</li>
+                        <li>Pix, cartão e boleto</li>
+                        <li>Troca grátis em até 7 dias (se o produto existir)</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <p class="rodape-aviso">Projeto educacional: loja, produtos, preços e pagamentos são fictícios.</p>
+
+        </div>
+    </footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/checkout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido confirmado | Loja Impossível</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <p class="faixa-promo">
+        Frete grátis acima de R$ 99 e 10% OFF com o cupom <strong>IMPOSSIVEL10</strong>
+    </p>
+
+    <header>
+        <div class="container cabecalho-linha">
+
+            <a class="logo" href="../index.html"><img src="../img/favicon.svg" alt="">Loja Impossível</a>
+
+            <form class="busca" action="../index.html">
+                <label class="sr-only" for="busca">Buscar produtos</label>
+                <input type="search" id="busca" name="busca" placeholder="Busque: bolso, espaço, formiga...">
+                <button>Buscar</button>
+            </form>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#catalogo">Catálogo</a></li>
+                    <li><a href="../index.html#regras">Regras</a></li>
+                    <li><a href="checkout.html">Carrinho <span class="carrinho-contador" hidden>0</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="container">
+
+            <section class="sucesso painel">
+                <p class="sucesso-icone" aria-hidden="true">✓</p>
+                <h1>Pedido confirmado!</h1>
+                <p class="sucesso-texto">Obrigado, <strong class="sucesso-nome"></strong>! Enviamos os detalhes para <strong class="sucesso-email"></strong>.</p>
+
+                <dl class="sucesso-dados">
+                    <div><dt>Número do pedido</dt><dd class="sucesso-numero"></dd></div>
+                    <div><dt>Data</dt><dd class="sucesso-data"></dd></div>
+                    <div><dt>Entrega</dt><dd class="sucesso-entrega"></dd></div>
+                    <div><dt>Endereço</dt><dd class="sucesso-endereco"></dd></div>
+                </dl>
+
+                <div class="sucesso-pagamento"></div>
+
+                <h2>Itens</h2>
+                <ul class="resumo-itens"></ul>
+
+                <dl class="resumo-totais">
+                    <div><dt>Subtotal</dt><dd class="total-subtotal"></dd></div>
+                    <div><dt>Desconto</dt><dd class="total-desconto"></dd></div>
+                    <div><dt>Frete</dt><dd class="total-frete"></dd></div>
+                    <div class="resumo-total"><dt>Total</dt><dd class="total-geral"></dd></div>
+                </dl>
+
+                <a class="botao" href="../index.html">Voltar à loja</a>
+            </section>
+
+            <section class="sucesso painel sucesso-vazio" hidden>
+                <h1>Nenhum pedido por aqui</h1>
+                <p class="sucesso-texto">Não encontramos um pedido recente. Que tal escolher algo impossível?</p>
+                <a class="botao" href="../index.html#catalogo">Ver produtos</a>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+            <div class="rodape-grade">
+
+                <section>
+                    <h2>Loja Impossível</h2>
+                    <p>A loja de produtos que não existem. Cada item segue uma regra criativa e nenhum deles cabe na vida real.</p>
+                </section>
+
+                <nav>
+                    <h2>Navegue</h2>
+                    <ul>
+                        <li><a href="../index.html">Página inicial</a></li>
+                        <li><a href="../index.html#catalogo">Catálogo</a></li>
+                        <li><a href="../index.html#regras">Como escolhemos os produtos</a></li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <h2>Atendimento</h2>
+                    <ul>
+                        <li>Segunda a sexta, das 9h às 18h</li>
+                        <li>Pix, cartão e boleto</li>
+                        <li>Troca grátis em até 7 dias (se o produto existir)</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <p class="rodape-aviso">Projeto educacional: loja, produtos, preços e pagamentos são fictícios.</p>
+
+        </div>
+    </footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/sucesso.js"></script>
+
+</body>
+</html>

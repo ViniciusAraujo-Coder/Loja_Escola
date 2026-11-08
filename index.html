@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Impossível</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
@@ -29,6 +32,7 @@
                     <li><a href="index.html" aria-current="page">Início</a></li>
                     <li><a href="index.html#catalogo">Catálogo</a></li>
                     <li><a href="index.html#regras">Regras</a></li>
+                    <li><a href="pages/checkout.html">Carrinho <span class="carrinho-contador" hidden>0</span></a></li>
                 </ul>
             </nav>
 
@@ -41,11 +45,19 @@
             <div class="container destaque-conteudo">
                 <div class="destaque-texto">
                     <p class="destaque-selo">Promoção Mega Impossível</p>
-                    <h1>Até 31% OFF no que nem existe</h1>
+                    <h1>Até 31% OFF no que <span class="destaque-cor">nem existe</span></h1>
                     <p class="destaque-descricao">Mini sol de bolso, botas para o espaço e abraço em lata. Aproveite antes que a realidade descubra.</p>
-                    <a class="botao" href="#catalogo">Ver ofertas</a>
+                    <div class="destaque-botoes">
+                        <a class="botao" href="#catalogo">Ver ofertas</a>
+                        <a class="botao botao-claro" href="#regras">Como funciona</a>
+                    </div>
+                    <ul class="destaque-provas">
+                        <li><strong>4,9 ★</strong> avaliação dos clientes</li>
+                        <li><strong>+12 mil</strong> pedidos imaginários</li>
+                        <li><strong>0</strong> produtos reais</li>
+                    </ul>
                 </div>
-                <img src="img/produtos.png" alt="">
+                <img class="destaque-imagem" src="img/sacola.png" alt="Sacola de compras cercada de ofertas: selo de desconto, pote com coração e fone de ouvido">
             </div>
         </section>
 
@@ -76,58 +88,23 @@
             </ul>
 
             <section class="secao" id="catalogo">
-                <h2>Produtos impossíveis</h2>
-
-                <div class="produtos">
-
-                    <article class="card">
-                        <img src="https://placehold.co/600x600" alt="Mini Sol de Bolso">
-                        <p class="card-categoria">Miniaturas</p>
-                        <h3 class="card-titulo"><a href="pages/produto.html">Mini Sol de Bolso</a></h3>
-                        <p class="card-descricao">Um sol de verdade, só que do tamanho de uma bola de pingue-pongue.</p>
-                        <p class="card-preco">
-                            <strong>R$ 89,90</strong>
-                            <s>R$ 129,90</s>
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <img src="https://placehold.co/600x600" alt="Botas Orbitais">
-                        <p class="card-categoria">Espaço e Tempo</p>
-                        <h3 class="card-titulo"><a href="pages/produto.html">Botas Orbitais Antigravidade</a></h3>
-                        <p class="card-descricao">Caminhe pela estação espacial sem sair voando pelo teto.</p>
-                        <p class="card-preco">
-                            <strong>R$ 349,00</strong>
-                            <s>R$ 499,00</s>
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <img src="https://placehold.co/600x600" alt="Abraço em Lata">
-                        <p class="card-categoria">Bem-estar</p>
-                        <h3 class="card-titulo"><a href="pages/produto.html">Abraço em Lata</a></h3>
-                        <p class="card-descricao">Abriu, abraçou. Sem refil, sem arrependimento.</p>
-                        <p class="card-preco">
-                            <strong>R$ 24,90</strong>
-                            <s>R$ 34,90</s>
-                        </p>
-                    </article>
-
-                    <article class="card">
-                        <img src="https://placehold.co/600x600" alt="Baobá de Estimação">
-                        <p class="card-categoria">Gigantes</p>
-                        <h3 class="card-titulo"><a href="pages/produto.html">Baobá de Estimação XXL</a></h3>
-                        <p class="card-descricao">Um baobá adulto de 7 metros para quem sonha grande.</p>
-                        <p class="card-preco">
-                            <strong>R$ 1.899,00</strong>
-                            <s>R$ 2.499,00</s>
-                        </p>
-                    </article>
-
+                <div class="secao-topo">
+                    <div>
+                        <p class="secao-rotulo">Ofertas da semana</p>
+                        <h2>Produtos impossíveis</h2>
+                    </div>
+                    <p class="catalogo-contagem"></p>
                 </div>
+
+                <div class="filtros" role="group" aria-label="Filtrar por categoria"></div>
+
+                <div class="produtos"></div>
+
+                <p class="catalogo-vazio" hidden>Nenhum produto encontrado. Tente outra palavra ou categoria.</p>
             </section>
 
             <section class="secao regras" id="regras">
+                <p class="secao-rotulo">Como funciona</p>
                 <h2>As 6 regras impossíveis</h2>
                 <p class="regras-intro">Todo produto precisa cumprir pelo menos uma destas regras. É assim que garantimos que nada aqui existe.</p>
 
@@ -177,38 +154,61 @@
                 </ul>
             </section>
 
+            <section class="secao novidades">
+                <div class="novidades-texto">
+                    <h2>Receba ofertas impossíveis</h2>
+                    <p>Um e-mail por semana com lançamentos que não existem e cupons que existem.</p>
+                </div>
+                <form class="novidades-form" novalidate>
+                    <label class="sr-only" for="novidades-email">Seu e-mail</label>
+                    <input type="email" id="novidades-email" name="email" placeholder="seu@email.com">
+                    <button class="botao" type="submit">Quero receber</button>
+                    <p class="novidades-mensagem" role="status"></p>
+                </form>
+            </section>
+
         </div>
 
     </main>
 
     <footer>
+        <div class="container">
 
-        <section>
-            <h2>Loja Impossível</h2>
-            <p>A loja de produtos que não existem. Cada item segue uma regra criativa e nenhum deles cabe na vida real.</p>
-        </section>
+            <div class="rodape-grade">
 
-        <nav>
-            <h2>Navegue</h2>
-            <ul>
-                <li><a href="index.html">Página inicial</a></li>
-                <li><a href="index.html#catalogo">Catálogo</a></li>
-                <li><a href="index.html#regras">Como escolhemos os produtos</a></li>
-            </ul>
-        </nav>
+                <section>
+                    <h2>Loja Impossível</h2>
+                    <p>A loja de produtos que não existem. Cada item segue uma regra criativa e nenhum deles cabe na vida real.</p>
+                </section>
 
-        <section>
-            <h2>Atendimento</h2>
-            <ul>
-                <li>Segunda a sexta, das 9h às 18h</li>
-                <li>Pix, cartão e boleto</li>
-                <li>Troca grátis em até 7 dias (se o produto existir)</li>
-            </ul>
-        </section>
+                <nav>
+                    <h2>Navegue</h2>
+                    <ul>
+                        <li><a href="index.html">Página inicial</a></li>
+                        <li><a href="index.html#catalogo">Catálogo</a></li>
+                        <li><a href="index.html#regras">Como escolhemos os produtos</a></li>
+                    </ul>
+                </nav>
 
-        <p>Projeto educacional: loja, produtos, preços e pagamentos são fictícios.</p>
+                <section>
+                    <h2>Atendimento</h2>
+                    <ul>
+                        <li>Segunda a sexta, das 9h às 18h</li>
+                        <li>Pix, cartão e boleto</li>
+                        <li>Troca grátis em até 7 dias (se o produto existir)</li>
+                    </ul>
+                </section>
 
+            </div>
+
+            <p class="rodape-aviso">Projeto educacional: loja, produtos, preços e pagamentos são fictícios.</p>
+
+        </div>
     </footer>
+
+    <script src="js/produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/index.js"></script>
 
 </body>
 </html>

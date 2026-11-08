@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | Loja Impossível</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <p class="faixa-promo">
+        Frete grátis acima de R$ 99 e 10% OFF com o cupom <strong>IMPOSSIVEL10</strong>
+    </p>
+
+    <header>
+        <div class="container cabecalho-linha">
+
+            <a class="logo" href="../index.html"><img src="../img/favicon.svg" alt="">Loja Impossível</a>
+
+            <form class="busca" action="../index.html">
+                <label class="sr-only" for="busca">Buscar produtos</label>
+                <input type="search" id="busca" name="busca" placeholder="Busque: bolso, espaço, formiga...">
+                <button>Buscar</button>
+            </form>
+
+            <nav class="menu">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="../index.html#catalogo">Catálogo</a></li>
+                    <li><a href="../index.html#regras">Regras</a></li>
+                    <li><a href="checkout.html">Carrinho <span class="carrinho-contador" hidden>0</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="pagina">
+        <div class="container">
+
+            <nav class="trilha" aria-label="Você está aqui">
+                <a href="../index.html">Início</a>
+                <span aria-hidden="true">›</span>
+                <a href="../index.html#catalogo">Catálogo</a>
+                <span aria-hidden="true">›</span>
+                <span class="trilha-atual">Produto</span>
+            </nav>
+
+            <article class="produto">
+                <img class="produto-imagem" src="https://placehold.co/600x600" alt="">
+
+                <div class="produto-info">
+                    <p class="produto-categoria"></p>
+                    <h1 class="produto-nome">Carregando...</h1>
+                    <p class="produto-regra">Regra: <strong></strong></p>
+                    <p class="produto-descricao"></p>
+
+                    <p class="produto-preco">
+                        <strong></strong>
+                        <s></s>
+                        <span class="produto-economia"></span>
+                    </p>
+                    <p class="produto-parcelas"></p>
+
+                    <form class="produto-compra">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="number" id="quantidade" name="quantidade" value="1" min="1" max="10">
+                        <button class="botao" type="submit">Adicionar ao carrinho</button>
+                        <button class="botao botao-claro" type="button" data-acao="comprar">Comprar agora</button>
+                    </form>
+                    <p class="produto-aviso" role="status"></p>
+
+                    <h2>Detalhes</h2>
+                    <ul class="produto-detalhes"></ul>
+                </div>
+            </article>
+
+            <section class="produto-nao-encontrado painel" hidden>
+                <h1>Produto não encontrado</h1>
+                <p>Esse produto não existe… nem mesmo aqui na Loja Impossível.</p>
+                <a class="botao" href="../index.html#catalogo">Voltar ao catálogo</a>
+            </section>
+
+            <section class="secao relacionados">
+                <h2>Você também pode gostar</h2>
+                <div class="produtos"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+
+            <div class="rodape-grade">
+
+                <section>
+                    <h2>Loja Impossível</h2>
+                    <p>A loja de produtos que não existem. Cada item segue uma regra criativa e nenhum deles cabe na vida real.</p>
+                </section>
+
+                <nav>
+                    <h2>Navegue</h2>
+                    <ul>
+                        <li><a href="../index.html">Página inicial</a></li>
+                        <li><a href="../index.html#catalogo">Catálogo</a></li>
+                        <li><a href="../index.html#regras">Como escolhemos os produtos</a></li>
+                    </ul>
+                </nav>
+
+                <section>
+                    <h2>Atendimento</h2>
+                    <ul>
+                        <li>Segunda a sexta, das 9h às 18h</li>
+                        <li>Pix, cartão e boleto</li>
+                        <li>Troca grátis em até 7 dias (se o produto existir)</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <p class="rodape-aviso">Projeto educacional: loja, produtos, preços e pagamentos são fictícios.</p>
+
+        </div>
+    </footer>
+
+    <script src="../js/produtos.js"></script>
+    <script src="../js/carrinho.js"></script>
+    <script src="../js/produto.js"></script>
+
+</body>
+</html>
