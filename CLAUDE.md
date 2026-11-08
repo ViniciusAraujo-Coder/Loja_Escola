@@ -24,6 +24,7 @@ loja-impossivel/
 ├── pages/        (produto.html, checkout.html, sucesso.html)
 ├── css/styles.css
 ├── js/           (produtos, carrinho, index, produto, checkout, sucesso)
+├── docs/         (capturas de tela usadas no README.md)
 └── img/
     ├── favicon.svg     (logo e ícone da aba, laranja)
     ├── sacola.png      (imagem do destaque, 1280x1229, fundo transparente)
